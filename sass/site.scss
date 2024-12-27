@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+html {
+  font-size: 12px
+}
+
+* {
+  box-sizing: border-box;
+  text-rendering: geometricPrecision
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 0;
+  word-wrap: break-word
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media only screen and (max-width: 30em) {
+  footer time[datetime$="M"] {
+    display: none;
+  }
+
+  .nav-header {
+    flex-direction: column;
+  }
+}
+
+a {
+  cursor: pointer;
+  color: #ff2e88;
+  text-decoration: none;
+  border-bottom: 1px solid #ff2e88
+}
+
+.light a {
+  color: #000;
+  font-weight: bold;
+}
+
+a:hover {
+  background-color: #ff2e88;
+  color: #fff
+}
+
+/* Style for all icons in the container */
+#sun-icon,
+#moon-icon,
+.social-icon {
+  padding: 0.1em;
+  height: 1.5em;
+  width: auto;
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+/* Dark mode toggle specific styles to ensure alignment */
+#dark-mode-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.hack {
+  font-style: normal;
+  font-family:
+    Sora, monospace, serif
+}
+
+.hack h1:after {
+  content: "====================================================================================================";
+  position: absolute;
+  bottom: 10px;
+  left: 0
+}
+
+.hack h1+* {
+  margin-top: 0
+}
+  
+.hack h1 {
+  position: relative;
+  display: inline-block;
+  display: table-cell;
+  padding: 20px 0 30px;
+  margin: 0;
+  overflow: hidden
+}
+
+/* Light and dark color schemes */
+.dark {
+  color: #ccc
+}
+
+.light {
+  color: #333;
+}
+
+
+.dark,
+.dark pre {
+  background-color: #000
+}
+
+.light,
+.light pre {
+  background-color: #f6f7f4;
+}
+
+.light .dark pre {
+  padding: 10px;
+  border: none
+}
+
+.container {
+  max-width: 70rem
+}
+
+.container,
+.container-fluid {
+  margin: 0 auto;
+  padding: 0 1rem
+}
+
+@-moz-document url-prefix() {
+  .hack h1 {
+    display: block
+  }
+}
